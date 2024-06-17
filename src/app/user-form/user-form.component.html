@@ -1,0 +1,16 @@
+<!-- user-form.component.html -->
+
+<div>
+  <h2>User Form</h2>
+  <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="username">Username:</label>
+      <input type="text" id="username" formControlName="username">
+    </div>
+    <div>
+      <label for="email">Email:</label>
+      <input type="email" id="email" formControlName="email">
+    </div>
+    <button type="submit" [disabled]="userForm.invalid">Create User</button>
+  </form>
+</div>
